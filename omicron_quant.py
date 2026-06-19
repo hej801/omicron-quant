@@ -66,6 +66,8 @@ except ImportError:
 
 try:
     from hmmlearn.hmm import GaussianHMM
+    import warnings
+    warnings.filterwarnings("ignore", message=".*not converging.*")
     HAVE_HMM = True
 except ImportError:
     HAVE_HMM = False
